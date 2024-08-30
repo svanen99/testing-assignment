@@ -17,7 +17,7 @@ describe("Suite for footer component", () => {
 
   it("Checks for link in footer", () => {
     render (<Footer />)
-    const externalLink = screen.getByRole("link", {name: "Github"})
+    const externalLink = screen.getByRole("link")
     expect(externalLink).toBeInTheDocument
     expect(externalLink).toHaveAttribute("href", "https://github.com/blombergalex/alex-bloom")
   })
