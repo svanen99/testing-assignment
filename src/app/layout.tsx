@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Blooming",
-  description: "Alexandra Blomberg - About me, my projects, let us connect!",
+  description: "A blooming portfolio - The display of my projects! By Alexandra Blomberg",
 };
 
 export default function RootLayout({
@@ -17,8 +17,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="w-screen h-ful m-0">
-      <body className="w-full min-h-full">
+    <html lang="en" className="w-screen h-full m-0">
+      <body className="flex flex-col w-full min-h-screen">
       <Header />
         <div className="flex-grow">
           {children}

@@ -17,7 +17,7 @@ describe("Suite for header component", () => {
 
   it("Checks that the header has a specific subtitle", () => {
     render(<Header />)
-    const headerText2 = screen.getByRole('heading', { level: 2, name: "Let's bloom together"})
+    const headerText2 = screen.getByRole('heading', { level: 2, name: "Welcome to my project garden"})
     expect(headerText2).toBeInTheDocument()
   })
 })

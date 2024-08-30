@@ -1,0 +1,8 @@
+Test for remove functionality
+
+ // queryall project items by testId
+    // get uuid of item to be removed - OM UTAN UUID borde alla tas bort
+    // mock item with uu id
+    // fireevent click on the matching remove button
+    // mock remove-btn click on matching remove btn
+    // expect mock-item to not be in the document
