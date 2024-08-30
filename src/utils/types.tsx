@@ -5,4 +5,5 @@ export type ProjectType = {
   description: string;
   githubLink: string;
   websiteLink: string;
+  isFavourite: boolean
 }
