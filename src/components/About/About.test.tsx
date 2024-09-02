@@ -20,20 +20,25 @@ describe("Checks that about component renders correctly", () => {
   });
 
   it("Checks for full name", () => {
-    render(<AboutMe />);
+    const title = "Alexandra Blomberg, aka Blomman";
+    render(<AboutMe title={title}/>);
     const fullName = screen.getByTestId("full-name");
-    expect(fullName).toHaveTextContent("Alexandra Blomberg, aka Blomman");
+    expect(fullName).toHaveTextContent(title);
   });
 
   it("Checks for personal description", () => {
-    render(<AboutMe />);
+    const mockDescription = "Description of me..."
+    render(<AboutMe description={mockDescription} />);
     const description = screen.getByTestId("description");
     expect(description).toBeInTheDocument();
+    expect(description).toHaveTextContent(mockDescription);
   });
 
   it("Checks for description of the site's purpose", () => {
-    render(<AboutMe />);
+    const mockPurpose = "The purpose of this site is..."
+    render(<AboutMe purpose={mockPurpose}/>);
     const purpose = screen.getByTestId("purpose-text");
     expect("purpose-text").toBeInTheDocument();
+    expect(purpose).toHaveTextContent(mockPurpose);
   });
 });
