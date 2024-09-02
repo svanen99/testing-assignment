@@ -71,4 +71,5 @@ describe("Checks project component has correct content and functionality", () =>
     const updatedFavouriteButton = screen.getByTestId("favourite-btn");
     expect(updatedFavouriteButton).toHaveClass("text-amber-500"); // expect favourite state at page load to be true ie heart is yellow:
   });
+
 });

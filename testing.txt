@@ -1,13 +1,3 @@
-Test for remove functionality
-
- // queryall project items by testId
-    // get uuid of item to be removed - OM UTAN UUID borde alla tas bort
-    // mock item with uu id
-    // fireevent click on the matching remove button
-    // mock remove-btn click on matching remove btn
-    // expect mock-item to not be in the document
-
-
 
 GRADING CRITERIAS 
 
@@ -18,7 +8,7 @@ A minimum of 20 unit tests which MUST include:
 - getByRole ✅
 - getAll by something ✅
 - queryBy something ✅
-- at least 2 different events - 2 click events?
+- at least 2 different type of events ! 
 
 A minimum of 3 integration tests which MUST include
 - Some aspect of state changing that is clearly defined
