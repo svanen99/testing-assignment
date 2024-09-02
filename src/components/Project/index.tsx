@@ -1,8 +1,14 @@
-import React, { useState } from 'react';
-import { ProjectType } from '@/utils/types' 
+import React, { useState } from "react";
+import { ProjectType } from "@/utils/types";
 
-
-const Project = ({title, imgSrc, alt, description, githubLink, websiteLink}: ProjectType) => {
+const Project = ({
+  title,
+  imgSrc,
+  alt,
+  description,
+  githubLink,
+  websiteLink,
+}: ProjectType) => {
   const [favourite, setFavourite] = useState(false);
 
   const handleFavoriteClick = () => {
@@ -11,18 +17,32 @@ const Project = ({title, imgSrc, alt, description, githubLink, websiteLink}: Pro
   };
 
   return (
-    <div>
-      <h1>{title}</h1>
+    <div data-testid="project">
+      <h3>{title}</h3>
       <img src={imgSrc} alt={alt} />
       <p>{description}</p>
-      <a href={githubLink}>GitHub</a>
-      <a href={websiteLink}>Website</a>
+      <a
+        data-testid="github-link"
+        href={githubLink}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub
+      </a>
+      <a
+        data-testid="webstite-link"
+        href={websiteLink}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Website
+      </a>
       <button
         onClick={handleFavoriteClick}
-        className={favourite ? 'text-yellow-500' : 'text-gray-400'}
-        data-testid="heart-button"
+        className={favourite ? "text-amber-500" : "text-gray-400"}
+        data-testid="favourite-btn"
       >
-       {/* get heart symbol styled with text color  */}
+        {/* get heart symbol styled with text color  */}
       </button>
     </div>
   );

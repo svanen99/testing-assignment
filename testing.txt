@@ -6,3 +6,43 @@ Test for remove functionality
     // fireevent click on the matching remove button
     // mock remove-btn click on matching remove btn
     // expect mock-item to not be in the document
+
+
+
+GRADING CRITERIAS 
+
+A minimum of 5 components
+
+A minimum of 20 unit tests which MUST include:
+
+- getByRole ✅
+- getAll by something ✅
+- queryBy something ✅
+- at least 2 different events - 2 click events?
+
+A minimum of 3 integration tests which MUST include
+- Some aspect of state changing that is clearly defined
+- Appropriate test suites and file organization
+- Tests are relevant - complexity will NOT be rewarded.
+- Test are coherent - a semi-experienced developer reading them should be able to understand what they are testing
+
+
+Submission:
+A written proposal descripting the features & functionality of the application
+Screen shots are encouraged to clearly communicate what the application should do
+A link to a github repo that (in addition to the 'base' files created by your choice of react framework) contains:
+
+one "ReadMe" file for your proposal​
+one test directory that contains all the tests you have written
+NO OTHER files should be included. Just a read me and tests inside a test dir​ectory
+
+
+A presentation to the class of your application and how it works. Presentations will take place on Tuesday September 10. Presentations are mandatory, if you cannot be there you must submit a short video showing your site.
+
+
+
+Pay attention to the submission. I should be able to clone your project, run npm install and the only code you have written will be tests inside a __test__ directory, Do not submit any components, I only want the tests.
+
+
+
+It is advisable to create one project to develop the application and tests, then when you are finished copy JUST the test to another project for submission.

@@ -1,8 +1,8 @@
 import { screen, render, fireEvent } from "@testing-library/react";
 import Project from ".";
 
-describe("Check project component", () => {
-  it("Checks project component renders correctly", () => {
+describe("Checks project component has correct content and functionality", () => {
+  it("Checks that the project component renders correctly", () => {
     render(<Project />);
     const project = screen.getByTestId("project");
     expect(project).toBeInTheDocument();
@@ -60,15 +60,15 @@ describe("Check project component", () => {
   });
 
   it("Checks that favourite is saved in state on button click", () => {
-    render(<Project />)
-    const favouriteButton = screen.getByTestId("favourite-button");
+    render(<Project />);
+    const favouriteButton = screen.getByTestId("favourite-btn");
     expect(favouriteButton).toBeInTheDocument();
 
-    expect(favouriteButton).toHaveClass('text-gray-400');  // expect favourite state at page load to be false ie heart is grey:
+    expect(favouriteButton).toHaveClass("text-gray-400"); // expect favourite state at page load to be false ie heart is grey:
 
     fireEvent.click(favouriteButton);
 
-    const updatedFavouriteButton = screen.getByTestId("favourite-button");
-    expect(updatedFavouriteButton).toHaveClass('text-amber-500');  // expect favourite state at page load to be true ie heart is yellow:
-  })
+    const updatedFavouriteButton = screen.getByTestId("favourite-btn");
+    expect(updatedFavouriteButton).toHaveClass("text-amber-500"); // expect favourite state at page load to be true ie heart is yellow:
+  });
 });
