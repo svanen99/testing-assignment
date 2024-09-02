@@ -6,4 +6,8 @@ describe("That the Favourite-list renders as expected", () => {
     const favouriteList = screen.queryByTestId("favourite-list");
     expect("favourite-list").not.toBeInTheDocument(); // not showing at start
   });
+
+  it("Checks that project is scrolled into view on click", () => {
+    //mock onclick to check that correct project scroll into view
+  })
 });

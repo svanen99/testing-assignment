@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ProjectType } from "@/utils/types";
 
+
 const Project = ({
   title,
   imgSrc,
@@ -16,6 +17,7 @@ const Project = ({
     // Handle the logic for updating the favorite status
   };
 
+  //NOTE: component needs uuid for testing because there are several favourite-btns 
   return (
     <div data-testid="project">
       <h3>{title}</h3>

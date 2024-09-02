@@ -72,4 +72,16 @@ describe("Checks project component has correct content and functionality", () =>
     expect(updatedFavouriteButton).toHaveClass("text-amber-500"); // expect favourite state at page load to be true ie heart is yellow:
   });
 
+  it("Checks that favourite state is removed on second button click", () => {
+    render(<Project />);
+    const favouriteButton = screen.getByTestId("favourite-btn");
+    expect(favouriteButton).toBeInTheDocument();
+
+    expect(favouriteButton).toHaveClass("text-amber-500"); 
+
+    fireEvent.click(favouriteButton);
+
+    const updatedFavouriteButton = screen.getByTestId("favourite-btn");
+    expect(updatedFavouriteButton).toHaveClass("text-gray-400"); 
+  });
 });
