@@ -46,7 +46,7 @@ describe("Checks that the project section renders and work as expected", () => {
     const favouriteList = screen.queryByTestId("favourite-list");
     expect(favouriteList).not.toBeInTheDocument();
 
-    const favouriteButton = screen.getByTestId("favourite-btn"); 
+    const favouriteButton = screen.getByTestId("favourite-btn");
     fireEvent.click(favouriteButton);
 
     const updatedFavouriteList = screen.getByTestId("favourite-list");
@@ -58,11 +58,12 @@ describe("Checks that the project section renders and work as expected", () => {
     expect(emptiedFavouriteList).not.toHaveTextContent(mockFavouriteTitle);
   });
 
-  it("Checks that click on item in favourites list work as expected", () => { // if applicable, otherwise remove!
-    render (<ProjectSection/>);
+  it("Checks that click on item in favourites list work as expected", () => {
+    // if applicable, otherwise remove!
+    render(<ProjectSection />);
     const favouriteProject = screen.getByTestId("favourite-project");
     fireEvent.click(favouriteProject);
 
     //mock scroll into view to project that was clicked
-  })
+  });
 });

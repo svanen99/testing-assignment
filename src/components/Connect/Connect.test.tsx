@@ -39,7 +39,7 @@ describe("Checks that Connect component renders correctly", () => {
 
     render(<Connect imgSrc={mockImgSrc} alt={mockAltText} />);
 
-    const profileImage = screen.getByRole("img", {name: mockAltText});
+    const profileImage = screen.getByRole("img", { name: mockAltText });
     expect(profileImage).toBeInTheDocument();
     expect(profileImage).toHaveAttribute("src", mockImgSrc);
   });
