@@ -25,6 +25,7 @@ describe("Checks project component has correct content and functionality", () =>
     const mockAltText = "Project Name";
 
     render(<Project imgSrc={mockImageSrc} alt={mockAltText} />);
+
     const projectImage = screen.getByRole("img", { name: mockAltText });
     expect(projectImage).toBeInTheDocument();
     expect(projectImage).toHaveAttribute("src", mockImageSrc);
@@ -77,11 +78,11 @@ describe("Checks project component has correct content and functionality", () =>
     const favouriteButton = screen.getByTestId("favourite-btn");
     expect(favouriteButton).toBeInTheDocument();
 
-    expect(favouriteButton).toHaveClass("text-amber-500"); 
+    expect(favouriteButton).toHaveClass("text-amber-500");
 
     fireEvent.click(favouriteButton);
 
     const updatedFavouriteButton = screen.getByTestId("favourite-btn");
-    expect(updatedFavouriteButton).toHaveClass("text-gray-400"); 
+    expect(updatedFavouriteButton).toHaveClass("text-gray-400");
   });
 });
