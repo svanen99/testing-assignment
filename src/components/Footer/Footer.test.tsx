@@ -12,17 +12,39 @@ describe("Suite for footer component", () => {
     render(<Footer />);
     const footerInfo = screen.getByTestId("footer");
     expect(footerInfo).toHaveTextContent(
-      /Alexandra Blomberg © 2024 | See repo in Github/i
+      /Alexandra Blomberg © 2024 | Source code available here/i
     );
   });
 
-  it("Checks for link in footer", () => {
+  it("Checks for Github link in footer", () => {
     render(<Footer />);
     const externalLink = screen.getByRole("link");
     expect(externalLink).toBeInTheDocument();
     expect(externalLink).toHaveAttribute(
       "href",
-      "https://github.com/blombergalex/alex-bloom"
+      "https://github.com/blombergalex"
+    );
+  });
+
+  it("Checks for mail address", () => {
+    render(<Footer />);
+    const mailLink = screen.getByRole("link", {
+      name: "blombergalexandras@gmail.com",
+    });
+    expect(mailLink).toBeInTheDocument();
+    expect(mailLink).toHaveAttribute(
+      "href",
+      "mailto:blombergalexandras@gmail.com"
+    );
+  });
+
+  it("Checks for LinkedIn link", () => {
+    render(<Footer />);
+    const socialLink = screen.getByRole("link", { name: "LinkedIn" });
+    expect(socialLink).toBeInTheDocument();
+    expect(socialLink).toHaveAttribute(
+      "href",
+      "https://www.linkedin.com/in/alexandra-blomberg-7231a616a/"
     );
   });
 });
