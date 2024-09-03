@@ -1,4 +1,5 @@
 export type ProjectType = {
+  id: string;
   title: string;
   imgSrc: string;
   alt: string;
