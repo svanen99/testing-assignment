@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import Header from ".";
 
-describe("Suite for header component", () => {
+describe("Tests for header component", () => {
   it("Checks the header container is rendered", () => {
     render(<Header />);
     const headerContainer = screen.getByTestId("header");
@@ -21,7 +21,7 @@ describe("Suite for header component", () => {
     render(<Header />);
     const headerText2 = screen.getByRole("heading", {
       level: 2,
-      name: "Welcome to my project garden",
+      name: "Welcome to my portfolio",
     });
     expect(headerText2).toBeInTheDocument();
   });
