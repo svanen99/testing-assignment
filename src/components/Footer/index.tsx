@@ -1,4 +1,4 @@
-import { EnvelopeIcon, UserPlusIcon } from '@heroicons/react/24/outline';
+import { EnvelopeIcon, UserPlusIcon } from "@heroicons/react/24/outline";
 
 const Footer = () => {
   const currentDate = new Date().getFullYear();
@@ -9,7 +9,9 @@ const Footer = () => {
       className="flex flex-col justify-center p-4 bg-amber-500 text-gray-300"
     >
       <div className="my-10 md:mx-10">
-        <h3 className="flex font-semibold font-SansNarrow text-lg mb-4">Say Hello</h3>
+        <h3 className="flex font-semibold font-SansNarrow text-lg mb-4">
+          Say Hello
+        </h3>
         <div className="flex flex-col space-y-4">
           <a
             href="mailto:blombergalexandras@gmail.com"
@@ -29,7 +31,10 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      <p data-testid="bottom-text" className="text-center pt-14 border-t-2 border-t-gray-300 font-SansNarrow md:text-lg">
+      <p
+        data-testid="bottom-text"
+        className="text-center pt-14 border-t-2 border-t-gray-300 font-SansNarrow md:text-lg"
+      >
         Alexandra Blomberg &copy; {currentDate} | &nbsp;
         <a
           href="https://github.com/blombergalex/alex-bloom"
