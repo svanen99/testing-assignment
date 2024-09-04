@@ -1,6 +1,5 @@
 import { ProjectType } from "@/utils/types";
 
-
 type FavouriteListProps = {
   favouriteIds: string[];
   projects: ProjectType[];
