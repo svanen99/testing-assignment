@@ -1,15 +1,32 @@
-import React from 'react'
+import { ProjectType } from "@/utils/types";
 
-// Each list item needs test-id: favourite-project (see test for projectsection click event)
 
-const FavouriteList = () => {
-  {favourite} ? 
-  return (
-    <div data-testid="favourite-list">
-      <h2 className="text-gray-200 bg-black text-center py-6 font-SansNarrow font-semi-bold text-lg md:text-2xl sticky top-0 z-10">Your favourites</h2>
+type FavouriteListProps = {
+  favouriteIds: string[];
+  projects: ProjectType[];
+};
+
+const FavouriteList = ({ favouriteIds, projects }: FavouriteListProps) => {
+  const favouriteProjects = projects.filter((project) =>
+    favouriteIds.includes(project.id)
+  );
+
+  return favouriteProjects.length > 0 ? (
+      <div data-testid="favourite-list" className="flex flex-col m-6">
+      <h2 className="text-gray-200 max-w-fit text-center py-6 font-SansNarrow font-semi-bold text-lg md:text-2xl">
+        Your favourites
+      </h2>
+      <ul className="max-w-sm">
+        {favouriteProjects.map((project) => (
+          <li key={project.id} data-testid="favourite-project"
+            className="text-gray-200"
+          >
+            {project.title}
+          </li>
+        ))}
+      </ul>
     </div>
-      : null:
-  )
-}
+  ) : null;
+};
 
-export default FavouriteList
+export default FavouriteList;

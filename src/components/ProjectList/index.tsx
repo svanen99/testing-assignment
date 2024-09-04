@@ -1,13 +1,14 @@
-import React from 'react'
 import Project from '../Project'
 import { projects } from '@/utils/data'
 import { ProjectType } from '@/utils/types'
 
 type ProjectListProps = {
-  projectItems: ProjectType[]
+  projectItems: ProjectType[];
+  onFavouriteToggle: (id: string) => void;
+  favouriteProjects: string[];
 }
 
-const ProjectList = ({projectItems}:ProjectListProps) => {
+const ProjectList = ({projectItems, onFavouriteToggle, favouriteProjects}:ProjectListProps) => {
   return (
     <div>
       <div data-testid="project-list" className={`flex flex-wrap text-gray-200 ${projectItems.length % 4 === 0 ? "justify-center" : "justify-start"}`}>
@@ -15,6 +16,8 @@ const ProjectList = ({projectItems}:ProjectListProps) => {
           <Project
             key={item.id}
             {...item}
+            onFavouriteToggle={onFavouriteToggle}
+            isFavourite={favouriteProjects.includes(item.id)} //check if project is favourited
           />
         ))}
       </div>

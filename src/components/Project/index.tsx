@@ -1,7 +1,12 @@
-import React, { useState } from "react";
+// import { useState } from "react";
 import { HeartIcon } from "@heroicons/react/20/solid";
 import { ProjectType } from "@/utils/types";
 import Image from "next/image";
+
+  type ProjectProps = ProjectType & {
+    onFavouriteToggle: (id: string) => void;
+    isFavourite: boolean;
+  }
 
 const Project = ({
   id,
@@ -11,12 +16,14 @@ const Project = ({
   description,
   githubLink,
   websiteLink,
-}: ProjectType) => {
-  const [favourite, setFavourite] = useState(false);
+  onFavouriteToggle,
+  isFavourite
+}: ProjectProps) => {
+  // const [favourite, setFavourite] = useState(false);
 
-  const handleFavoriteClick = () => {
-    setFavourite(!favourite);
-  };
+  // const handleFavoriteClick = () => {
+  //   setFavourite(!favourite);
+  // };
 
   return (
     <div
@@ -36,7 +43,6 @@ const Project = ({
           />
         </div>
       </div>
-
       <div className="flex flex-col flex-grow p-4">
         <h3 className="text-lg text-black font-semibold mb-2">{title}</h3>
         <p className="text-gray-700 mb-4 flex-grow">{description}</p>
@@ -60,8 +66,8 @@ const Project = ({
             Visit website
           </a>
           <button
-            onClick={handleFavoriteClick}
-            className={`text-xl ${favourite ? "text-amber-500" : "text-gray-400"} transition-colors duration-300`}
+            onClick={() => onFavouriteToggle(id)}
+            className={`text-xl ${isFavourite ? "text-amber-500" : "text-gray-400"} transition-colors duration-300`}
             data-testid="favourite-btn"
           >
             <HeartIcon className={"w-6 h-6"} />
