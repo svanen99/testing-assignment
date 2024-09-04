@@ -8,7 +8,6 @@ type ProjectListProps = {
 }
 
 const ProjectList = ({projectItems}:ProjectListProps) => {
-  console.log(projects)
   return (
     <div>
       <div data-testid="project-list" className={`flex flex-wrap text-gray-200 ${projectItems.length % 4 === 0 ? "justify-center" : "justify-start"}`}>

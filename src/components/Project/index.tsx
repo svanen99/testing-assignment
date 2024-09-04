@@ -16,7 +16,6 @@ const Project = ({
 
   const handleFavoriteClick = () => {
     setFavourite(!favourite);
-    console.log(favourite)
   };
 
   return (
@@ -30,9 +29,10 @@ const Project = ({
           <Image
             src={imgSrc}
             alt={alt}
-            layout="fill" 
-            objectFit="cover" 
+            layout="fill"
+            objectFit="cover"
             className="rounded-lg"
+            sizes="(max-width: 340px)"
           />
         </div>
       </div>
@@ -64,7 +64,7 @@ const Project = ({
             className={`text-xl ${favourite ? "text-amber-500" : "text-gray-400"} transition-colors duration-300`}
             data-testid="favourite-btn"
           >
-            <HeartIcon className={"w-6 h-6"}/>
+            <HeartIcon className={"w-6 h-6"} />
           </button>
         </div>
       </div>
