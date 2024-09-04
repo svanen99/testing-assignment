@@ -9,8 +9,8 @@ const mockProjects: ProjectType[] = [
     imgSrc: "/images/project1.jpg",
     alt: "Project One Image",
     description: "Description for project one.",
-    githubLink: "https://github.com/project-one",
-    websiteLink: "https://project-one.com",
+    githubLink: "https://github.com/blombergalex/project-one",
+    websiteLink: "https://vercel.project-one.com",
     favourite: true
   },
   {
@@ -19,8 +19,8 @@ const mockProjects: ProjectType[] = [
     imgSrc: "/images/project2.jpg",
     alt: "Project Two Image",
     description: "Description for project two.",
-    githubLink: "https://github.com/project-two",
-    websiteLink: "https://project-two.com",
+    githubLink: "https://github.com/blombergalex/project-two",
+    websiteLink: "https://vercel.project-two.com",
     favourite: false
   }
 ];
@@ -31,7 +31,7 @@ describe("FavouriteList component renders as expected", () => {
   it("Checks that the list shows when expected", () => {
     render(<FavouriteList projects={mockProjects} favouriteIds={mockFavouriteIds}/>);
     const favouriteList = screen.queryByTestId("favourite-list");
-    expect("favourite-list").toBeInTheDocument(); 
+    expect(favouriteList).toBeInTheDocument(); 
   });
 
   it("Checks for FavouriteList title", () => {
