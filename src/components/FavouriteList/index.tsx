@@ -21,7 +21,8 @@ const FavouriteList = ({ favouriteIds, projects }: FavouriteListProps) => {
           <li key={project.id} data-testid="favourite-project"
             className="text-gray-200"
           >
-            {project.title}
+            <a href={project.websiteLink} target="_blank"
+            rel="noopener noreferrer" className="hover:underline">{project.title}</a>
           </li>
         ))}
       </ul>

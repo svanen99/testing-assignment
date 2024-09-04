@@ -52,7 +52,7 @@ const Project = ({
             href={githubLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-amber-500 hover:font-semibold mb-2"
+            className="text-amber-500 hover:underline mb-2"
           >
             See code in GitHub
           </a>
@@ -61,7 +61,7 @@ const Project = ({
             href={websiteLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-amber-500 hover:font-semibold mb-2"
+            className="text-amber-500 hover:underline mb-2"
           >
             Visit website
           </a>
