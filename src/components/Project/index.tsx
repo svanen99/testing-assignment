@@ -16,6 +16,7 @@ const Project = ({
 
   const handleFavoriteClick = () => {
     setFavourite(!favourite);
+    console.log(favourite)
   };
 
   return (
