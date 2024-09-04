@@ -10,8 +10,8 @@ describe("Suite for footer component", () => {
 
   it("Checks for correct info in footer", () => {
     render(<Footer />);
-    const footerInfo = screen.getByTestId("footer");
-    expect(footerInfo).toHaveTextContent(
+    const bottomText = screen.getByTestId("bottom-text");
+    expect(bottomText).toHaveTextContent(
       /Alexandra Blomberg © 2024 | Source code available here/i
     );
   });
