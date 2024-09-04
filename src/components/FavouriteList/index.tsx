@@ -1,4 +1,5 @@
 import { ProjectType } from "@/utils/types";
+import { HeartIcon } from "@heroicons/react/20/solid";
 
 type FavouriteListProps = {
   favouriteIds: string[];
@@ -18,8 +19,9 @@ const FavouriteList = ({ favouriteIds, projects }: FavouriteListProps) => {
       <ul className="max-w-sm">
         {favouriteProjects.map((project) => (
           <li key={project.id} data-testid="favourite-project"
-            className="text-gray-200"
-          >
+            className="flex text-gray-200"
+          > 
+            <HeartIcon className={"w-6 h-6 text-amber-500 mr-1"} />
             <a href={project.websiteLink} target="_blank"
             rel="noopener noreferrer" className="hover:underline">{project.title}</a>
           </li>

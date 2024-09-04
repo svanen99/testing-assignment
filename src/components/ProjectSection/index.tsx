@@ -10,13 +10,10 @@ const ProjectSection = () => {
   const [favouriteProjects, setFavouriteProjects] = useState<string[]>([]);
 
   const handleFavouriteToggle = (id: string) => {
-    setFavouriteProjects(
-      (
-        prevFavourites // prevFavourites holds the current state of favouriteProjects
-      ) =>
-        prevFavourites.includes(id) // if clicked id is already in favourites array, it is removed
-          ? prevFavourites.filter((favId) => favId !== id) // creates new array including elements from prevFavourites except the one with matching id, removing the id from the favourites list
-          : [...prevFavourites, id] // the id is not in the prevFavourites list so it should be added to the list
+    setFavouriteProjects((prevFavourites) =>
+      prevFavourites.includes(id)
+        ? prevFavourites.filter((favId) => favId !== id)
+        : [...prevFavourites, id]
     );
   };
 
@@ -27,7 +24,7 @@ const ProjectSection = () => {
       </h2>
       <ProjectList
         projectItems={projects}
-        onFavouriteToggle={handleFavouriteToggle} 
+        onFavouriteToggle={handleFavouriteToggle}
         favouriteProjects={favouriteProjects}
       />
       {/* <ShowAllButton /> */}

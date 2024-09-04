@@ -1,5 +1,4 @@
 import Project from '../Project'
-import { projects } from '@/utils/data'
 import { ProjectType } from '@/utils/types'
 
 type ProjectListProps = {
@@ -17,7 +16,7 @@ const ProjectList = ({projectItems, onFavouriteToggle, favouriteProjects}:Projec
             key={item.id}
             {...item}
             onFavouriteToggle={onFavouriteToggle}
-            isFavourite={favouriteProjects.includes(item.id)} //check if project is favourited
+            isFavourite={favouriteProjects.includes(item.id)}
           />
         ))}
       </div>

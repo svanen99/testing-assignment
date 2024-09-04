@@ -19,10 +19,10 @@ describe("The ProjectList is rendered correctly", () => {
 
     const defaultProjects = screen.queryAllByTestId("project");
 
-    expect(defaultProjects[0]).toHaveTextContent("Project 1"); //for this portfolio
-    expect(defaultProjects[1]).toHaveTextContent("Project 2"); // parking time
-    expect(defaultProjects[2]).toHaveTextContent("Project 3"); // music library 2.0
-    expect(defaultProjects[3]).toHaveTextContent("Project 4"); // the music library
+    expect(defaultProjects[0]).toHaveTextContent("Project 1"); 
+    expect(defaultProjects[1]).toHaveTextContent("Project 2"); 
+    expect(defaultProjects[2]).toHaveTextContent("Project 3"); 
+    expect(defaultProjects[3]).toHaveTextContent("Project 4"); 
   });
 
   it("Checks that all rendered projects ");

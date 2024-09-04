@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import { HeartIcon } from "@heroicons/react/20/solid";
 import { ProjectType } from "@/utils/types";
 import Image from "next/image";
@@ -19,11 +18,6 @@ const Project = ({
   onFavouriteToggle,
   isFavourite
 }: ProjectProps) => {
-  // const [favourite, setFavourite] = useState(false);
-
-  // const handleFavoriteClick = () => {
-  //   setFavourite(!favourite);
-  // };
 
   return (
     <div
