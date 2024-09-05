@@ -8,9 +8,6 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'hero-image': "url('/sunflower.jpg')",
-      },
       fontFamily: {
         flowers: ['"Send Flowers"', 'cursive'],
         SansNarrow: ['"PT Sans Narrow"'],
