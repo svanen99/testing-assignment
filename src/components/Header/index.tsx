@@ -15,8 +15,8 @@ const Header = () => {
         </h1>
         <Image
           src="/images/floating-sunflowers.png"
-          width={100}
-          height={75}
+          width={340}
+          height={225}
           alt="Sunflowers floating in hero section"
           className="h-28 w-auto md:h-56"
         />
