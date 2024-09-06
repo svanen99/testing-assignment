@@ -10,11 +10,11 @@ describe("Checks project component has correct content and functionality", () =>
     description: "Here is a mockdescription of a project",
     githubLink: "https://github.com/blombergalex/project",
     websiteLink: "https://vercel.project.app",
-    favourite: false
+    favourite: false,
   };
-  
+
   it("Checks that the project component renders correctly", () => {
-    render(<Project {...mockData}/>);
+    render(<Project {...mockData} />);
     const project = screen.getByTestId("project");
     expect(project).toBeInTheDocument();
   });
@@ -34,7 +34,10 @@ describe("Checks project component has correct content and functionality", () =>
 
     const projectImage = screen.getByRole("img", { name: mockData.alt });
     expect(projectImage).toBeInTheDocument();
-    expect(projectImage).toHaveAttribute("src", expect.stringContaining(encodeURIComponent(mockData.imgSrc)));
+    expect(projectImage).toHaveAttribute(
+      "src",
+      expect.stringContaining(encodeURIComponent(mockData.imgSrc))
+    );
   });
 
   it("Checks the project description is rendered correctly", () => {
@@ -63,8 +66,6 @@ describe("Checks project component has correct content and functionality", () =>
     expect(websiteLink).toHaveAttribute("rel", "noopener noreferrer");
   });
 
-
-
   it("Checks that favourite is saved in state on button click", () => {
     render(<Project {...mockData} />);
     const favouriteButton = screen.getByTestId("favourite-btn");
@@ -87,6 +88,8 @@ describe("Checks project component has correct content and functionality", () =>
     fireEvent.click(favouriteButton);
 
     const updatedFavouriteButton = screen.getByTestId("favourite-btn");
-    expect(updatedFavouriteButton.classList.contains("text-gray-400")).toBe(true);
+    expect(updatedFavouriteButton.classList.contains("text-gray-400")).toBe(
+      true
+    );
   });
 });

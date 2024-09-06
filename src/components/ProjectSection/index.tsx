@@ -6,7 +6,6 @@ import { projects } from "@/utils/data";
 import FavouriteList from "../FavouriteList";
 
 const ProjectSection = () => {
-  // const [showAll, setShowAll] = useState(false); // starts as false to hide all but four projects, state should be passed to each project, if showAll, show all, else show only four
   const [favouriteProjects, setFavouriteProjects] = useState<string[]>([]);
 
   const handleFavouriteToggle = (id: string) => {
@@ -27,7 +26,6 @@ const ProjectSection = () => {
         onFavouriteToggle={handleFavouriteToggle}
         favouriteProjects={favouriteProjects}
       />
-      {/* <ShowAllButton /> */}
       <FavouriteList favouriteIds={favouriteProjects} projects={projects} />
     </section>
   );

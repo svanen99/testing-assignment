@@ -25,5 +25,31 @@ describe("The ProjectList is rendered correctly", () => {
     expect(defaultProjects[3]).toHaveTextContent("Project 4"); 
   });
 
-  it("Checks that all rendered projects ");
+  it("Checks control of showAll state when the ShowAllButton is clicked", () => {
+    render(<ProjectSection />);
+    const visibleProjects = screen.getAllByTestId("project");
+    expect(visibleProjects.length).toBe(4);
+
+    const showAllButton = screen.getByTestId("show-all-btn");
+    fireEvent.click(showAllButton);
+
+    const allVisibleProjects = screen.queryAllByTestId("project");
+    expect(allVisibleProjects.length).toBeGreaterThan(4);
+
+    fireEvent.click(showAllButton);
+    const visibleProjectsAfterReset = screen.getAllByTestId("project");
+    expect(visibleProjectsAfterReset.length).toBe(4);
+  });
+
+  it("Checks that showAll state resets when the ShowAllButton is clicked again", () => {
+    render(<ProjectSection />);
+    const visibleProjects = screen.getAllByTestId("project");
+    expect(visibleProjects.length).toBe(4);
+
+    const showAllButton = screen.getByTestId("show-all-btn");
+    fireEvent.click(showAllButton);
+
+    const allVisibleProjects = screen.queryAllByTestId("project");
+    expect(allVisibleProjects.length).toBeGreaterThan(4);
+  });
 });

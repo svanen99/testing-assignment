@@ -12,18 +12,26 @@ const FavouriteList = ({ favouriteIds, projects }: FavouriteListProps) => {
   );
 
   return favouriteProjects.length > 0 ? (
-      <div data-testid="favourite-list" className="flex flex-col m-6">
+    <div data-testid="favourite-list" className="flex flex-col m-6">
       <h2 className="text-gray-200 max-w-fit text-center py-6 font-SansNarrow font-semi-bold text-lg md:text-2xl">
         Your favourites
       </h2>
       <ul className="max-w-sm">
         {favouriteProjects.map((project) => (
-          <li key={project.id} data-testid="favourite-project"
+          <li
+            key={project.id}
+            data-testid="favourite-project"
             className="flex text-gray-200"
-          > 
+          >
             <HeartIcon className={"w-6 h-6 text-amber-500 mr-1"} />
-            <a href={project.websiteLink} target="_blank"
-            rel="noopener noreferrer" className="hover:underline">{project.title}</a>
+            <a
+              href={project.websiteLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              {project.title}
+            </a>
           </li>
         ))}
       </ul>

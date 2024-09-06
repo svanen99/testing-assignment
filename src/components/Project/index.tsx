@@ -2,10 +2,10 @@ import { HeartIcon } from "@heroicons/react/20/solid";
 import { ProjectType } from "@/utils/types";
 import Image from "next/image";
 
-  type ProjectProps = ProjectType & {
-    onFavouriteToggle: (id: string) => void;
-    isFavourite: boolean;
-  }
+type ProjectProps = ProjectType & {
+  onFavouriteToggle: (id: string) => void;
+  isFavourite: boolean;
+};
 
 const Project = ({
   id,
@@ -16,9 +16,8 @@ const Project = ({
   githubLink,
   websiteLink,
   onFavouriteToggle,
-  isFavourite
+  isFavourite,
 }: ProjectProps) => {
-
   return (
     <div
       key={id}

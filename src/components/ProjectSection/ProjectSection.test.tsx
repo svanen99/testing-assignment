@@ -11,33 +11,6 @@ describe("Checks that the project section renders and work as expected", () => {
     expect(sectionTitle).toBeInTheDocument();
   });
 
-  it("Checks control of showAll state when the ShowAllButton is clicked", () => {
-    render(<ProjectSection />);
-    const visibleProjects = screen.getAllByTestId("project");
-    expect(visibleProjects.length).toBe(4);
-
-    const showAllButton = screen.getByTestId("show-all-btn");
-    fireEvent.click(showAllButton);
-
-    const allVisibleProjects = screen.queryAllByTestId("project");
-    expect(allVisibleProjects.length).toBeGreaterThan(4);
-
-    fireEvent.click(showAllButton);
-    const visibleProjectsAfterReset = screen.getAllByTestId("project");
-    expect(visibleProjectsAfterReset.length).toBe(4);
-  });
-
-  it("Checks that showAll state resets when the ShowAllButton is clicked again", () => {
-    render(<ProjectSection />);
-    const visibleProjects = screen.getAllByTestId("project");
-    expect(visibleProjects.length).toBe(4);
-
-    const showAllButton = screen.getByTestId("show-all-btn");
-    fireEvent.click(showAllButton);
-
-    const allVisibleProjects = screen.queryAllByTestId("project");
-    expect(allVisibleProjects.length).toBeGreaterThan(4);
-  });
 
   it("Checks that favourites can be saved to and removed from list", () => {
     const mockFavouriteTitle = "Project no 3";

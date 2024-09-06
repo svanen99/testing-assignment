@@ -14,7 +14,7 @@ const Header = () => {
           ALEXANDRA BLOMBERG
         </h1>
         <Image
-          src="/images/sunflowers.png"
+          src="/images/floating-sunflowers.png"
           width={100}
           height={75}
           alt="Sunflowers floating in hero section"
