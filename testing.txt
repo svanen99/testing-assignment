@@ -16,8 +16,8 @@ A minimum of 3 integration tests which MUST include
 - Tests are relevant - complexity will NOT be rewarded.
 - Test are coherent - a semi-experienced developer reading them should be able to understand what they are testing
 
-  1: show all button -> make more items in project section show
-  2: hide button -> make items hide
+  1: show all button -> make more items in project section show ✅
+    : hide button -> make items hide
   3: add favourite -> favourite from project added to favouriteList
   4: remove favourite -> favourite removed when project is un-favourited
 

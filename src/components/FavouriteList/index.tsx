@@ -25,6 +25,7 @@ const FavouriteList = ({ favouriteIds, projects }: FavouriteListProps) => {
           >
             <HeartIcon className={"w-6 h-6 text-amber-500 mr-1"} />
             <a
+              data-testid="website-link"
               href={project.websiteLink}
               target="_blank"
               rel="noopener noreferrer"
