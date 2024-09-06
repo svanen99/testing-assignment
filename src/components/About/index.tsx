@@ -1,11 +1,6 @@
-import React from 'react'
+import { AboutMeType } from '@/utils/types'
 
-type AboutMeType = {
-  description: string,
-  purpose: string,
-}
-
-const AboutMe = ({ description, purpose}: AboutMeType) => {
+const AboutMe = ({ aboutDescription, aboutPurpose}: AboutMeType) => {
   return (
     <section data-testid="about-me-section" className='md:p-14'>
       <div className='text-gray-200 bg-black sticky top:0 z-10'>
@@ -15,6 +10,8 @@ const AboutMe = ({ description, purpose}: AboutMeType) => {
         <h3 className='text-4xl font-SansNarrow font-semi-bold'>
           I'm Alexandra
         </h3>
+        <p>{aboutDescription}</p>
+        <p>{aboutPurpose}</p>
       </div>
 
     </section>

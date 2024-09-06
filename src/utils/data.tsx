@@ -1,5 +1,13 @@
-import { ProjectType } from "./types";
+import { AboutMeType, ProjectType } from "./types";
 import { v4 as uuidv4 } from 'uuid';
+
+// export const aboutDescription = ""
+// export const aboutPurpose = ""
+
+export const aboutPageInfo: AboutMeType = {
+  aboutDescription: "",
+  aboutPurpose: ""
+}
 
 export const projects: ProjectType[] = [
   {

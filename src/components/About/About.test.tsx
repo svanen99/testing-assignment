@@ -1,9 +1,10 @@
 import { screen, render } from "@testing-library/react";
 import AboutMe from ".";
+import { AboutMeType } from "@/utils/types";
 
-const mockData = {
-  description: "This is a mock description written for the purpose of testing",
-  purpose: "This is a mock description of the purpose of this site"
+const mockData:AboutMeType = {
+  aboutDescription: "This is a mock description written for the purpose of testing",
+  aboutPurpose: "This is a mock description of the purpose of this site"
 }
 
 describe("Checks that about component renders correctly", () => {
@@ -35,13 +36,13 @@ describe("Checks that about component renders correctly", () => {
     render(<AboutMe  {...mockData} />);
     const description = screen.getByTestId("description");
     expect(description).toBeInTheDocument();
-    expect(description).toHaveTextContent(mockData.description);
+    expect(description).toHaveTextContent(mockData.aboutDescription);
   });
 
   it("Checks for description of the site's purpose", () => {
     render(<AboutMe {...mockData} />);
     const purpose = screen.getByTestId("purpose-text");
     expect("purpose-text").toBeInTheDocument();
-    expect(purpose).toHaveTextContent(mockData.purpose);
+    expect(purpose).toHaveTextContent(mockData.aboutPurpose);
   });
 });

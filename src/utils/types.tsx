@@ -8,3 +8,8 @@ export type ProjectType = {
   websiteLink: string;
   favourite: boolean
 }
+
+export type AboutMeType = {
+  aboutDescription: string,
+  aboutPurpose: string,
+}
