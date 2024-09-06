@@ -1,8 +1,20 @@
 import { screen, render } from "@testing-library/react";
+import AboutMe from ".";
+
+const mockData = {
+  description: "This is a mock description written for the purpose of testing",
+  purpose: "This is a mock description of the purpose of this site"
+}
 
 describe("Checks that about component renders correctly", () => {
+  it("Checks component renders", () => {
+    render (<AboutMe {...mockData} />)
+    const aboutMe = screen.getByTestId("about-me-section");
+    expect(aboutMe).toBeInTheDocument();
+  })
+
   it("Checks for About Me section title", () => {
-    render(<AboutMe />);
+    render(<AboutMe {...mockData} />);
     const greeting = screen.getByRole("heading", {
       level: 2,
       name: "Hello",
@@ -11,7 +23,7 @@ describe("Checks that about component renders correctly", () => {
   });
 
   it("Checks for correct name", () => {
-    render(<AboutMe />);
+    render(<AboutMe {...mockData} />);
     const name = screen.getByRole("heading", {
       level: 3,
       name: "I'm Alexandra",
@@ -19,26 +31,17 @@ describe("Checks that about component renders correctly", () => {
     expect(name).toBeInTheDocument();
   });
 
-  it("Checks for full name", () => {
-    const title = "Alexandra Blomberg, aka Blomman";
-    render(<AboutMe title={title} />);
-    const fullName = screen.getByTestId("full-name");
-    expect(fullName).toHaveTextContent(title);
-  });
-
   it("Checks for personal description", () => {
-    const mockDescription = "Description of me...";
-    render(<AboutMe description={mockDescription} />);
+    render(<AboutMe  {...mockData} />);
     const description = screen.getByTestId("description");
     expect(description).toBeInTheDocument();
-    expect(description).toHaveTextContent(mockDescription);
+    expect(description).toHaveTextContent(mockData.description);
   });
 
   it("Checks for description of the site's purpose", () => {
-    const mockPurpose = "The purpose of this site is...";
-    render(<AboutMe purpose={mockPurpose} />);
+    render(<AboutMe {...mockData} />);
     const purpose = screen.getByTestId("purpose-text");
     expect("purpose-text").toBeInTheDocument();
-    expect(purpose).toHaveTextContent(mockPurpose);
+    expect(purpose).toHaveTextContent(mockData.purpose);
   });
 });

@@ -2,19 +2,18 @@ import { screen, render, fireEvent } from "@testing-library/react";
 import Project from ".";
 
 const mockOnFavouriteToggle = () => {}
+const mockData = {
+  id: "1",
+  title: "Project title",
+  imgSrc: "/images/mockimage.jpg",
+  alt: "Mockalt text for image",
+  description: "Here is a mockdescription of a project",
+  githubLink: "https://github.com/blombergalex/project",
+  websiteLink: "https://vercel.project.app",
+  favourite: false,
+};
 
 describe("Project component has correct content and functionality", () => {
-  const mockData = {
-    id: "1",
-    title: "Project title",
-    imgSrc: "/images/mockimage.jpg",
-    alt: "Mockalt text for image",
-    description: "Here is a mockdescription of a project",
-    githubLink: "https://github.com/blombergalex/project",
-    websiteLink: "https://vercel.project.app",
-    favourite: false,
-  };
-
   it("Checks that the project component renders correctly", () => {
     render(<Project {...mockData} onFavouriteToggle={mockOnFavouriteToggle} isFavourite={false} />);
     const project = screen.getByTestId("project");
