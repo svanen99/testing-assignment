@@ -18,7 +18,6 @@ const ProjectList = ({
 
   const handleShowAllToggle = () => {
     setShowAll(!showAll);
-    console.log("Show all before click:" + showAll);
   };
 
   const displayedProjects = showAll ? projectItems : projectItems.slice(0, 4);
