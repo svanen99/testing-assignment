@@ -1,5 +1,4 @@
 import { AboutMeType } from '@/utils/types'
-// import { aboutPage } from '@/utils/data'
 
 const AboutMe = ({ start, experience, nextStep, purpose}: AboutMeType) => {
   return (

@@ -2,7 +2,7 @@ import { AboutMeType, ProjectType } from "./types";
 import { v4 as uuidv4 } from 'uuid';
 
 
-export const aboutPage: AboutMeType = {
+export const about: AboutMeType = {
   start: "My curiosity for coding was sparked when seeing friends work in development. I started learning through online courses and quickly realized how much enjoy it. A year later, I started my formal education in frontend development. I always loved puzzles and problem solving games as a kid so discovering coding feels like finding a gold mine in which I am thrilled to continue digging.",
   experience: "So far in my journey I've worked with React, TypeScript, Next.js, Vite, and CSS frameworks like SASS, Tailwind, and MUI. I love playing around with API data fetching and have experience working with Scrum through sprints. Git is an essential tool that brings control and efficiency in my work as I have become more and more comfortable with its power.",
   nextStep: "As I near the completion of my studies, I'm looking forward to the next phase of my career. I’m excited to pursue opportunities and refine my coding skills in frontend development. My goal is to join a collaborative team where I can apply my current knowledge and have the space and mentorship to continue growing.",

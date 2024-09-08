@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import ProjectList from "../ProjectList";
-import { projects } from "@/utils/data";
 import FavouriteList from "../FavouriteList";
 import { ProjectType } from "@/utils/types";
 
