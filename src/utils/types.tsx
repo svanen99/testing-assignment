@@ -10,6 +10,8 @@ export type ProjectType = {
 }
 
 export type AboutMeType = {
-  aboutDescription: string,
-  aboutPurpose: string,
+  start: string,
+  experience: string,
+  nextStep:string,
+  purpose: string,
 }
