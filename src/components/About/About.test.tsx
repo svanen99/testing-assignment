@@ -20,7 +20,7 @@ describe("Checks that about component renders correctly", () => {
     render(<AboutMe {...mockData} />);
     const greeting = screen.getByRole("heading", {
       level: 2,
-      name: "Hello",
+      name: "Hello,",
     });
     expect(greeting).toBeInTheDocument();
   });
@@ -36,29 +36,29 @@ describe("Checks that about component renders correctly", () => {
 
   it("Checks for introduction", () => {
     render(<AboutMe  {...mockData} />);
-    const description = screen.getByTestId("start");
-    expect(description).toBeInTheDocument();
-    expect(description).toHaveTextContent(mockData.start);
+    const startText = screen.getByTestId("start");
+    expect(startText).toBeInTheDocument();
+    expect(startText).toHaveTextContent(mockData.start);
   });
 
   it("Checks for experience text", () => {
     render(<AboutMe  {...mockData} />);
-    const description = screen.getByTestId("experience");
-    expect(description).toBeInTheDocument();
-    expect(description).toHaveTextContent(mockData.experience);
+    const experienceText = screen.getByTestId("experience");
+    expect(experienceText).toBeInTheDocument();
+    expect(experienceText).toHaveTextContent(mockData.experience);
   });
 
   it("Checks for text about next step", () => {
     render(<AboutMe  {...mockData} />);
-    const description = screen.getByTestId("next-step");
-    expect(description).toBeInTheDocument();
-    expect(description).toHaveTextContent(mockData.nextStep);
+    const nextStepText = screen.getByTestId("next-step");
+    expect(nextStepText).toBeInTheDocument();
+    expect(nextStepText).toHaveTextContent(mockData.nextStep);
   });
 
   it("Checks for description of the site's purpose", () => {
     render(<AboutMe {...mockData} />);
-    const purpose = screen.getByTestId("purpose");
-    expect("purpose-text").toBeInTheDocument();
-    expect(purpose).toHaveTextContent(mockData.purpose);
+    const purposeText = screen.getByTestId("purpose");
+    expect(purposeText).toBeInTheDocument();
+    expect(purposeText).toHaveTextContent(mockData.purpose);
   });
 });
