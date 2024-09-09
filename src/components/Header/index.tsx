@@ -10,7 +10,7 @@ const Header = () => {
         Welcome to my portfolio
       </h2>
       <div className="flex justify-between items-end">
-        <h1 className="self-end text-lg text-white uppercase opacity-60 font-SansNarrow ml-5 md:ml-10 sm:text-2xl md:tracking-wide">
+        <h1 className="self-end text-lg text-gray-200 uppercase font-SansNarrow ml-5 md:ml-10 sm:text-2xl md:tracking-wide">
           ALEXANDRA BLOMBERG
         </h1>
         <Image
