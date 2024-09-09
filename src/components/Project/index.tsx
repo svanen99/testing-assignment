@@ -45,7 +45,7 @@ const Project = ({
             href={githubLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-amber-500 hover:underline mb-2"
+            className="text-amber-500 hover:underline"
           >
             See code in GitHub
           </a>
@@ -54,16 +54,16 @@ const Project = ({
             href={websiteLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-amber-500 hover:underline mb-2"
+            className="text-amber-500 hover:underline"
           >
             Visit website
           </a>
           <button
             onClick={() => onFavouriteToggle(id)}
-            className={`text-xl ${isFavourite ? "text-amber-500" : "text-gray-400"} transition-colors duration-300`}
+            className={`text-xl ${isFavourite ? "text-amber-500" : "text-gray-300"} transition-colors duration-300`}
             data-testid="favourite-btn"
           >
-            <HeartIcon className={"w-6 h-6"} />
+            <HeartIcon className={"w-6 h-6 hover:text-amber-500"} />
           </button>
         </div>
       </div>

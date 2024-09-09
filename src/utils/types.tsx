@@ -15,3 +15,9 @@ export type AboutMeType = {
   nextStep:string,
   purpose: string,
 }
+
+export type ConnectType = {
+  connectText: string,
+  alt: string,
+  imgSrc: string
+}
