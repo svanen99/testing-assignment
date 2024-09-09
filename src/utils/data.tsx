@@ -41,7 +41,7 @@ export const projects: ProjectType[] = [
     title: "The Music Library",
     imgSrc: "/images/music-library.png",
     alt: "Snapshot of app The Music Library showcasing some recommendations of sweet albums",
-    description: "This is my first React creation where I practiced my understanding of the core React concepts of functional components, props, and state.",
+    description: "This is my first React creation where I practiced my understanding of the core React concepts of functional components, props, and state. Created with React, Vite and using CSS modules for the styling.",
     githubLink: "https://github.com/blombergalex/the-music-library",
     websiteLink: "https://the-music-library.netlify.app/",
     favourite: false
@@ -55,5 +55,35 @@ export const projects: ProjectType[] = [
     githubLink: "https://github.com/blombergalex/music-library2.0",
     websiteLink: "https://music-library2-0.vercel.app",
     favourite: false
-  } 
+  },
+  {
+    id: uuidv4(),
+    title: "Hey Babareeba",
+    imgSrc: "/images/hey-babareeba.png",
+    alt: "Snapshot of my song game Hey Babareeba",
+    description: "This song game is my first vanilla javascript creation. It's a game where the user has to guess the name of the songs played, one word at a time. Techs used; HTML, CSS, Vanilla JS.",
+    githubLink: "https://github.com/blombergalex/song-game",
+    websiteLink: "https://blombergalex.github.io/song-game/",
+    favourite: false
+  },
+  {
+    id: uuidv4(),
+    title: "Jungle Jam",
+    imgSrc: "/images/jungle-jam.png",
+    alt: "Snapshot of API data fetching app Jungle Jam",
+    description: "Jungle Jam lets the user enter a search of an animal and are presented with information about it. This is my first creation getting data from an external source, created with HTML, CSS, Javascript with the main event being a user fired API call.",
+    githubLink: "https://github.com/blombergalex/junglejam",
+    websiteLink: "https://blombergalex.github.io/junglejam/",
+    favourite: false
+  },
+  {
+    id: uuidv4(),
+    title: "Wonderflora",
+    imgSrc: "/images/wonderflora.png",
+    alt: "Snapshot of EJS app Wonderflora",
+    description: "Wonderflora is a floral shop where I practiced routing and using EJS templates. Technologies used was EJS, CSS and Jacvascript.",
+    githubLink: "https://github.com/blombergalex/wonderflora",
+    websiteLink: "https://wonderflora.onrender.com/",
+    favourite: false
+  }
 ];
