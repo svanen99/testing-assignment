@@ -26,8 +26,9 @@ const ProjectList = ({
     <div className="flex flex-col m-4 mx-auto">
       <div
         data-testid="project-list"
-        className={`flex flex-wrap text-gray-200 
-          ${projectItems.length % 4 === 0 ? "justify-center" : "justify-start"}`}
+        className={`flex flex-wrap text-gray-200 justify-center
+        ${projectItems.length % 4 === 0 ? "" : "md:justify-start"}`}
+
       >
         {displayedProjects &&
           displayedProjects.map((item) => (
