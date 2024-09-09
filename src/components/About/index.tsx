@@ -6,7 +6,7 @@ const AboutMe = ({ start, experience, nextStep, purpose }: AboutMeType) => {
       data-testid="about-me-section"
       className="flex justify-center p-6 md:p-14"
     >
-      <div className="text-gray-200 text-sm bg-black sticky top:0 z-10 space-y-5 md:text-lg">
+      <div className="text-gray-200 text-sm leading-6 bg-black sticky top:0 z-10 space-y-5 md:text-lg">
         <h2 className="text-gray-200 bg-black text-center py-6 font-SansNarrow font-semi-bold text-lg sticky top-0 z-10 md:text-2xl md:py-12">
           About Me
         </h2>
