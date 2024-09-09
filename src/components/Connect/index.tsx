@@ -2,7 +2,7 @@ import { ConnectType } from "@/utils/types";
 import { EnvelopeIcon, UserPlusIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 
-const Connect = ({ connectText }: ConnectType) => {
+const Connect = ({ connectText, imgSrc, alt }: ConnectType) => {
   return (
     <section
       data-testid="connect-section"
@@ -28,7 +28,7 @@ const Connect = ({ connectText }: ConnectType) => {
             </div>
             <div className="text-gray-200 hover:text-amber-500">
               <a
-                href="https://linkedin.com/in/alexandra-blomberg-7231a616a"
+                href="https://www.linkedin.com/in/alexandra-blomberg-7231a616a/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2"
@@ -39,10 +39,10 @@ const Connect = ({ connectText }: ConnectType) => {
             </div>
           </div>
           <Image
-            src="/images/floating-sunflowers.png" 
+            src={imgSrc}
             width={220}
             height={325}
-            alt="Image of Alexandra smiling"
+            alt={alt}
             className="h-28 w-auto md:h-56"
           />
         </div>

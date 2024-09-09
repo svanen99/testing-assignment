@@ -10,7 +10,9 @@ export const about: AboutMeType = {
 }
 
 export const connect: ConnectType = {
-  connectText: "Whether you're a fellow student, a future colleague, or a potential employer, I hope this space helps us connect. Take a look at my projects, and if you'd like to chat or collaborate, feel free to reach out! I'm always excited to connect and explore new opportunities."
+  connectText: "Whether you're a fellow student, a future colleague, or a potential employer, I hope this space helps us connect. Take a look at my projects, and if you'd like to chat or collaborate, feel free to reach out! I'm always excited to connect and explore new opportunities.",
+  imgSrc: "/images/profile.png",
+  alt: "Black and white image of Alexandra smiling"
 }
 
 export const projects: ProjectType[] = [

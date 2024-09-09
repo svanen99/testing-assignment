@@ -14,21 +14,21 @@ describe("Checks that Connect component renders correctly", () => {
     const aboutMe = screen.getByTestId("connect-section");
     expect(aboutMe).toBeInTheDocument();
   })
+  
+    it("Checks for Connect section title", () => {
+      render(<Connect {...mockData} />);
+      const connectSectionTitle = screen.getByRole("heading", {
+        level: 2,
+        name: "Let's Connect",
+      });
+      expect(connectSectionTitle).toBeInTheDocument();
+    });
 
   it("Checks for connect text", () => {
     render(<Connect  {...mockData} />);
     const startText = screen.getByTestId("connect-text");
     expect(startText).toBeInTheDocument();
     expect(startText).toHaveTextContent(mockData.connectText);
-  });
-
-  it("Checks for Connect section title", () => {
-    render(<Connect {...mockData} />);
-    const connectSectionTitle = screen.getByRole("heading", {
-      level: 2,
-      name: "Let's connect",
-    });
-    expect(connectSectionTitle).toBeInTheDocument();
   });
 
   it("Checks for mail address", () => {
@@ -57,6 +57,9 @@ describe("Checks that Connect component renders correctly", () => {
     render(<Connect {...mockData} />);
     const profileImage = screen.getByRole("img", { name: mockData.alt });
     expect(profileImage).toBeInTheDocument();
-    expect(profileImage).toHaveAttribute("src", mockData.imgSrc);
+    expect(profileImage).toHaveAttribute(
+      "src",
+      expect.stringContaining(encodeURIComponent(mockData.imgSrc))
+    );
   });
 });
