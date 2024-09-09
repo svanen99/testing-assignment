@@ -8,15 +8,15 @@ const Connect = ({ connectText, imgSrc, alt }: ConnectType) => {
       data-testid="connect-section"
       className="flex justify-center p-6 md:p-14"
     >
-      <div className="text-gray-200 text-sm bg-black sticky top:0 z-10 space-y-5 md:text-lg">
+      <div className="flex flex-col text-gray-200 text-sm bg-black sticky top:0 z-10 space-y-5 md:text-lg">
         <h2 className="text-gray-200 bg-black text-center py-6 font-SansNarrow font-semi-bold text-lg sticky top-0 z-10 md:text-2xl md:py-12">
           Let's Connect
         </h2>
         <p data-testid="connect-text" className="opacity-85">
           {connectText}
         </p>
-        <div className="flex justify-between">
-          <div className="flex flex-col space-y-4">
+        <div className="flex justify-between flex-wrap">
+          <div className="flex flex-col space-4 justify-center">
             <div  className="text-gray-200 hover:text-amber-500">
               <a
                 href="mailto:blombergalexandras@gmail.com"
@@ -38,13 +38,15 @@ const Connect = ({ connectText, imgSrc, alt }: ConnectType) => {
               </a>
             </div>
           </div>
-          <Image
-            src={imgSrc}
-            width={220}
-            height={325}
-            alt={alt}
-            className="h-28 w-auto md:h-56"
-          />
+              <div className="flex w-max-full justify-center mx-auto">
+                <Image
+                  src={imgSrc}
+                  width={225}
+                  height={340}
+                  alt={alt}
+                  className="max-w-32 h-auto rounded-full m-4"
+                />
+              </div>
         </div>
       </div>
     </section>
