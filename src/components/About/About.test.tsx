@@ -20,7 +20,7 @@ describe("Checks that about component renders correctly", () => {
     render(<AboutMe {...mockData} />);
     const greeting = screen.getByRole("heading", {
       level: 2,
-      name: "About Me,",
+      name: "About Me",
     });
     expect(greeting).toBeInTheDocument();
   });
@@ -29,7 +29,7 @@ describe("Checks that about component renders correctly", () => {
     render(<AboutMe {...mockData} />);
     const name = screen.getByRole("heading", {
       level: 3,
-      name: "I'm Alexandra",
+      name: "I'm Alexandra,",
     });
     expect(name).toBeInTheDocument();
   });
