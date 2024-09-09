@@ -1,6 +1,6 @@
 import { screen, render } from "@testing-library/react";
-import AboutMe from ".";
 import { AboutMeType } from "@/utils/types";
+import AboutMe from ".";
 
 const mockData:AboutMeType = {
   start: "This is a mock description written for the purpose of testing",
@@ -20,7 +20,7 @@ describe("Checks that about component renders correctly", () => {
     render(<AboutMe {...mockData} />);
     const greeting = screen.getByRole("heading", {
       level: 2,
-      name: "Hello,",
+      name: "About Me,",
     });
     expect(greeting).toBeInTheDocument();
   });
