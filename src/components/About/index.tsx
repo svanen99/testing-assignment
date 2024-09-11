@@ -1,5 +1,5 @@
 import { AboutMeType } from "@/utils/types";
-import Reveal from "../Reveal/reveal";
+import Reveal from "../../utils/reveal";
 
 const AboutMe = ({ start, experience, nextStep, purpose }: AboutMeType) => {
   return (
@@ -12,30 +12,30 @@ const AboutMe = ({ start, experience, nextStep, purpose }: AboutMeType) => {
           About Me
         </h2>
         <Reveal>
-            <h3 className="text-xl font-SansNarrow md:text-2xl">
-              I'm Alexandra,
-            </h3>
+          <h3 className="text-xl font-SansNarrow md:text-2xl">
+            I'm Alexandra,
+          </h3>
         </Reveal>
-            <Reveal>
-              <p data-testid="start" className="opacity-85">
-                {start}
-              </p>
-            </Reveal>
-            <Reveal>
-              <p data-testid="experience" className="opacity-85">
-                {experience}
-              </p>
-            </Reveal>
-            <Reveal>
-              <p data-testid="next-step" className="text-amber-500">
-                {nextStep}
-              </p>
-            </Reveal>
-            <Reveal>
-              <p data-testid="purpose" className="opacity-85">
-                {purpose}
-              </p>
-            </Reveal>
+        <Reveal>
+          <p data-testid="start" className="opacity-85">
+            {start}
+          </p>
+        </Reveal>
+        <Reveal>
+          <p data-testid="experience" className="opacity-85">
+            {experience}
+          </p>
+        </Reveal>
+        <Reveal>
+          <p data-testid="next-step" className="text-amber-500">
+            {nextStep}
+          </p>
+        </Reveal>
+        <Reveal>
+          <p data-testid="purpose" className="opacity-85">
+            {purpose}
+          </p>
+        </Reveal>
       </div>
     </section>
   );
