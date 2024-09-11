@@ -6,6 +6,7 @@ const mockProjects: ProjectType[] = [
   {
     id: "1",
     title: "Project One",
+    date: "month year",
     imgSrc: "/images/project1.jpg",
     alt: "Project One Image",
     description: "Description for project one.",
@@ -16,6 +17,7 @@ const mockProjects: ProjectType[] = [
   {
     id: "2",
     title: "Project Two",
+    date: "month year",
     imgSrc: "/images/project2.jpg",
     alt: "Project Two Image",
     description: "Description for project two.",

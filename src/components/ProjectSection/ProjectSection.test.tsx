@@ -6,6 +6,7 @@ export const mockProjects: ProjectType[] = [
   {
     id: "1",
     title: "Project 1",
+    date: "month year",
     imgSrc: "/images/project1.png",
     alt: "Snapshot of Project 1.",
     description: "Description of Project 1.",
@@ -16,6 +17,7 @@ export const mockProjects: ProjectType[] = [
   {
     id: "2",
     title: "Project 2",
+    date: "month year",
     imgSrc: "/images/project2.png",
     alt: "Snapshot of Project 2.",
     description: "Description of Project 2.",
@@ -26,6 +28,7 @@ export const mockProjects: ProjectType[] = [
   {
     id: "3",
     title: "Project 3",
+    date: "month year",
     imgSrc: "/images/project3.png",
     alt: "Snapshot of Project 3.",
     description: "Description of Project 3.",
@@ -36,6 +39,7 @@ export const mockProjects: ProjectType[] = [
   {
     id: "4",
     title: "Project 4",
+    date: "month year",
     imgSrc: "/images/project4.png",
     alt: "Snapshot of Project 4.",
     description: "Description of Project 4.",
@@ -46,6 +50,7 @@ export const mockProjects: ProjectType[] = [
   {
     id: "5",
     title: "Project 5",
+    date: "month year",
     imgSrc: "/images/project5.png",
     alt: "Snapshot of Project 5.",
     description: "Description of Project 5. ",
@@ -56,6 +61,7 @@ export const mockProjects: ProjectType[] = [
   {
     id: "6",
     title: "Project 6",
+    date: "month year",
     imgSrc: "/images/project6.png",
     alt: "Snapshot of Project 6.",
     description: "Description of Project 6.",
@@ -66,6 +72,7 @@ export const mockProjects: ProjectType[] = [
   {
     id: "7",
     title: "Project 7",
+    date: "month year",
     imgSrc: "/images/project7.png",
     alt: "Snapshot of Project 7.",
     description: "Description of Project 7",

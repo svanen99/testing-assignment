@@ -5,6 +5,7 @@ const mockOnFavouriteToggle = () => {}
 const mockData = {
   id: "1",
   title: "Project title",
+  date: "month year",
   imgSrc: "/images/mockimage.jpg",
   alt: "Mockalt text for image",
   description: "Here is a mockdescription of a project",
