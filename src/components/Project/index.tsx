@@ -23,15 +23,15 @@ const Project = ({
     <div
       key={id}
       data-testid="project"
-      className="flex flex-col bg-amber-100 rounded-lg shadow-lg overflow-hidden border border-gray-200 m-2 pt-4 max-w-[370px]"
+      className="flex flex-col bg-amber-100 rounded-lg shadow-lg overflow-hidden border border-gray-200 m-2 pt-4 max-w-[370px] max-[420px]:w-[320px]"
     >
       <div className="flex justify-center">
-        <div className="relative w-[340px] h-[250px]">
+        <div className="relative w-[340px] h-56 max-[420px]:w-[300px]">
           <Image
             src={imgSrc}
             alt={alt}
             layout="fill"
-            objectFit="cover"
+            objectFit="fill"
             className="rounded-lg"
             sizes="(max-width: 340px)"
           />
