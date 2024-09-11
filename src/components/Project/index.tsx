@@ -66,10 +66,10 @@ const Project = ({
           </a>
           <button
             onClick={() => onFavouriteToggle(id)}
-            className={`text-xl ${isFavourite ? "text-amber-500" : "text-gray-300"} transition-colors duration-300`}
             data-testid="favourite-btn"
+            className={`text-xl ${isFavourite ? "text-amber-500" : "text-gray-300"} transition-colors duration-300 w-6 h-6 lg:hover:text-amber-500`}
           >
-            <HeartIcon className={"w-6 h-6 hover:text-amber-500"} />
+            <HeartIcon  />
           </button>
         </div>
       </div>
