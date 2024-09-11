@@ -2,37 +2,37 @@ import { screen, render } from "@testing-library/react";
 import { ConnectType } from "@/utils/types";
 import Connect from ".";
 
-const mockData:ConnectType = {
-  connectText:"This is a mocktext for the connect section",
+const mockData: ConnectType = {
+  connectText: "This is a mocktext for the connect section",
   imgSrc: "/images/mock-profile.jpg",
   alt: "Mock alt text for testing purposes",
-}
+};
 
 describe("Checks that Connect component renders correctly", () => {
   it("Checks component renders", () => {
-    render (<Connect {...mockData} />)
+    render(<Connect {...mockData} />);
     const aboutMe = screen.getByTestId("connect-section");
     expect(aboutMe).toBeInTheDocument();
-  })
-  
-    it("Checks for Connect section title", () => {
-      render(<Connect {...mockData} />);
-      const connectSectionTitle = screen.getByRole("heading", {
-        level: 2,
-        name: "Let's Connect",
-      });
-      expect(connectSectionTitle).toBeInTheDocument();
+  });
+
+  it("Checks for Connect section title", () => {
+    render(<Connect {...mockData} />);
+    const connectSectionTitle = screen.getByRole("heading", {
+      level: 2,
+      name: "Let's Connect",
     });
+    expect(connectSectionTitle).toBeInTheDocument();
+  });
 
   it("Checks for connect text", () => {
-    render(<Connect  {...mockData} />);
+    render(<Connect {...mockData} />);
     const startText = screen.getByTestId("connect-text");
     expect(startText).toBeInTheDocument();
     expect(startText).toHaveTextContent(mockData.connectText);
   });
 
   it("Checks for mail address", () => {
-    render(<Connect {...mockData}/>);
+    render(<Connect {...mockData} />);
     const mailLink = screen.getByRole("link", {
       name: "blombergalexandras@gmail.com",
     });
@@ -44,7 +44,7 @@ describe("Checks that Connect component renders correctly", () => {
   });
 
   it("Checks for LinkedIn link", () => {
-    render(<Connect {...mockData}/>);
+    render(<Connect {...mockData} />);
     const socialLink = screen.getByRole("link", { name: "LinkedIn" });
     expect(socialLink).toBeInTheDocument();
     expect(socialLink).toHaveAttribute(

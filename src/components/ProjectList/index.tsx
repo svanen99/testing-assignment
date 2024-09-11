@@ -28,7 +28,6 @@ const ProjectList = ({
         data-testid="project-list"
         className={`flex flex-wrap text-gray-200 justify-center
         ${projectItems.length % 4 === 0 ? "" : "md:justify-start"}`}
-
       >
         {displayedProjects &&
           displayedProjects.map((item) => (

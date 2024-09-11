@@ -6,10 +6,10 @@ import FavouriteList from "../FavouriteList";
 import { ProjectType } from "@/utils/types";
 
 type ProjectSectionProps = {
-  projects: ProjectType[]; 
+  projects: ProjectType[];
 };
 
-const ProjectSection = ({projects}:ProjectSectionProps) => {
+const ProjectSection = ({ projects }: ProjectSectionProps) => {
   const [favouriteProjects, setFavouriteProjects] = useState<string[]>([]);
 
   const handleFavouriteToggle = (id: string) => {
@@ -21,7 +21,10 @@ const ProjectSection = ({projects}:ProjectSectionProps) => {
   };
 
   return (
-    <section datatest-id="project-section" className="flex flex-col justify-center md:p-14">
+    <section
+      datatest-id="project-section"
+      className="flex flex-col justify-center md:p-14"
+    >
       <h2 className="text-gray-200 bg-black text-center py-6 font-SansNarrow font-semi-bold text-lg md:text-2xl sticky top-0 z-10 md:py-12">
         My Projects
       </h2>

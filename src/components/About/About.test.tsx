@@ -2,19 +2,20 @@ import { screen, render } from "@testing-library/react";
 import { AboutMeType } from "@/utils/types";
 import AboutMe from ".";
 
-const mockData:AboutMeType = {
+const mockData: AboutMeType = {
   start: "This is a mock description written for the purpose of testing",
-  experience: "This is a mock description of my experience for the purpose of testing",
+  experience:
+    "This is a mock description of my experience for the purpose of testing",
   nextStep: "This is a mock description about the next step in my career",
-  purpose: "This is a mock description of the purpose of this site"
-}
+  purpose: "This is a mock description of the purpose of this site",
+};
 
 describe("Checks that about component renders correctly", () => {
   it("Checks component renders", () => {
-    render (<AboutMe {...mockData} />)
+    render(<AboutMe {...mockData} />);
     const aboutMe = screen.getByTestId("about-me-section");
     expect(aboutMe).toBeInTheDocument();
-  })
+  });
 
   it("Checks for About Me section title", () => {
     render(<AboutMe {...mockData} />);
@@ -35,21 +36,21 @@ describe("Checks that about component renders correctly", () => {
   });
 
   it("Checks for introduction", () => {
-    render(<AboutMe  {...mockData} />);
+    render(<AboutMe {...mockData} />);
     const startText = screen.getByTestId("start");
     expect(startText).toBeInTheDocument();
     expect(startText).toHaveTextContent(mockData.start);
   });
 
   it("Checks for experience text", () => {
-    render(<AboutMe  {...mockData} />);
+    render(<AboutMe {...mockData} />);
     const experienceText = screen.getByTestId("experience");
     expect(experienceText).toBeInTheDocument();
     expect(experienceText).toHaveTextContent(mockData.experience);
   });
 
   it("Checks for text about next step", () => {
-    render(<AboutMe  {...mockData} />);
+    render(<AboutMe {...mockData} />);
     const nextStepText = screen.getByTestId("next-step");
     expect(nextStepText).toBeInTheDocument();
     expect(nextStepText).toHaveTextContent(mockData.nextStep);

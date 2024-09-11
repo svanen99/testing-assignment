@@ -42,7 +42,9 @@ const Project = ({
           <h3 className="text-lg text-black">{title}</h3>
           <p className="text-gray-700 text-xs mt-2">{date}</p>
         </div>
-        <p data-testid="description" className="text-gray-700 mb-4 flex-grow">{description}</p>
+        <p data-testid="description" className="text-gray-700 mb-4 flex-grow">
+          {description}
+        </p>
         <div className="flex flex-row justify-between">
           <a
             data-testid="github-link"

@@ -147,11 +147,11 @@ describe("Checks that the project section renders and work as expected", () => {
     const favouriteButtons = screen.getAllByTestId("favourite-btn");
     fireEvent.click(favouriteButtons[0]);
     const showAllButton = screen.getByTestId("show-all-btn");
-    fireEvent.click(showAllButton); 
+    fireEvent.click(showAllButton);
     const allFavouriteButtons = screen.getAllByTestId("favourite-btn");
 
     fireEvent.click(allFavouriteButtons[4]);
-    fireEvent.click(allFavouriteButtons[6]); 
+    fireEvent.click(allFavouriteButtons[6]);
 
     let updatedFavouriteList = screen.getByTestId("favourite-list");
     expect(updatedFavouriteList).toHaveTextContent("Project 1");
@@ -166,7 +166,7 @@ describe("Checks that the project section renders and work as expected", () => {
     expect(updatedFavouriteList).toHaveTextContent("Project 5");
     expect(updatedFavouriteList).toHaveTextContent("Project 7");
 
-    fireEvent.click(showAllButton); 
+    fireEvent.click(showAllButton);
     const updatedFavouriteButtons = screen.getAllByTestId("favourite-btn");
     fireEvent.click(updatedFavouriteButtons[0]);
     fireEvent.click(updatedFavouriteButtons[1]);

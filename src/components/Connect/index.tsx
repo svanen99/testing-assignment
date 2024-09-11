@@ -17,7 +17,7 @@ const Connect = ({ connectText, imgSrc, alt }: ConnectType) => {
         </p>
         <div className="flex justify-between flex-wrap">
           <div className="flex flex-col space-4 justify-center">
-            <div  className="text-gray-200 hover:text-amber-500">
+            <div className="text-gray-200 hover:text-amber-500">
               <a
                 href="mailto:blombergalexandras@gmail.com"
                 className="flex items-center space-x-2"
@@ -38,15 +38,15 @@ const Connect = ({ connectText, imgSrc, alt }: ConnectType) => {
               </a>
             </div>
           </div>
-              <div className="flex w-max-full justify-center mx-auto">
-                <Image
-                  src={imgSrc}
-                  width={225}
-                  height={340}
-                  alt={alt}
-                  className="max-w-32 h-auto rounded-full m-4"
-                />
-              </div>
+          <div className="flex w-max-full justify-center mx-auto">
+            <Image
+              src={imgSrc}
+              width={225}
+              height={340}
+              alt={alt}
+              className="max-w-32 h-auto rounded-full m-4"
+            />
+          </div>
         </div>
       </div>
     </section>
