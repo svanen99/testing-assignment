@@ -66,10 +66,10 @@ describe("Project component has correct content and functionality", () => {
   });
 
   it("Checks that favourite is saved in state on button click", () => {
-    const {rerender } = render(<Project {...mockData} onFavouriteToggle={mockOnFavouriteToggle} isFavourite={false} />);
+    const {rerender} = render(<Project {...mockData} onFavouriteToggle={mockOnFavouriteToggle} isFavourite={false} />);
     const favouriteButton = screen.getByTestId("favourite-btn");
     expect(favouriteButton).toBeInTheDocument();
-    expect(favouriteButton.classList.contains("text-gray-400")).toBe(true);
+    expect(favouriteButton.classList.contains("text-gray-300")).toBe(true);
     
     fireEvent.click(favouriteButton);
     rerender(<Project {...mockData} onFavouriteToggle={mockOnFavouriteToggle} isFavourite={true} />);
@@ -87,6 +87,6 @@ describe("Project component has correct content and functionality", () => {
     fireEvent.click(favouriteButton);
     rerender(<Project {...mockData} onFavouriteToggle={mockOnFavouriteToggle} isFavourite={false} />)
     const updatedFavouriteButton = screen.getByTestId("favourite-btn");
-    expect(updatedFavouriteButton.classList.contains("text-gray-400")).toBe(true);
+    expect(updatedFavouriteButton.classList.contains("text-gray-300")).toBe(true);
   });
 });
