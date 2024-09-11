@@ -1,3 +1,4 @@
+import Reveal from "@/utils/reveal";
 import { ProjectType } from "@/utils/types";
 import { HeartIcon } from "@heroicons/react/20/solid";
 
@@ -13,7 +14,7 @@ const FavouriteList = ({ favouriteIds, projects }: FavouriteListProps) => {
 
   return favouriteProjects.length > 0 ? (
     <div data-testid="favourite-list" className="flex flex-col m-6">
-      <h2 className="text-gray-200 text-center py-6 font-SansNarrow font-semi-bold text-lg md:text-2xl">
+      <h2 className="text-gray-200 text-center py-6 font-SansNarrow font-semi-bold text-lg md:text-2xl animate-fade-in">
         Your favourites
       </h2>
       <ul className="max-w-sm">
@@ -21,7 +22,7 @@ const FavouriteList = ({ favouriteIds, projects }: FavouriteListProps) => {
           <li
             key={project.id}
             data-testid="favourite-project"
-            className="flex text-gray-200"
+            className="flex text-gray-200 animate-fade-in"
           >
             <HeartIcon className={"w-6 h-6 text-amber-500 mr-1"} />
             <a

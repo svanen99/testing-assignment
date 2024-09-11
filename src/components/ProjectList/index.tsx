@@ -2,6 +2,7 @@ import { useState } from "react";
 import Project from "../Project";
 import { ProjectType } from "@/utils/types";
 import ShowAllButton from "../ShowAllButton";
+import Reveal from "@/utils/reveal";
 
 type ProjectListProps = {
   projectItems: ProjectType[];
@@ -31,12 +32,14 @@ const ProjectList = ({
       >
         {displayedProjects &&
           displayedProjects.map((item) => (
-            <Project
-              key={item.id}
-              {...item}
-              onFavouriteToggle={onFavouriteToggle}
-              isFavourite={favouriteProjects.includes(item.id)}
-            />
+            <Reveal>
+              <Project
+                key={item.id}
+                {...item}
+                onFavouriteToggle={onFavouriteToggle}
+                isFavourite={favouriteProjects.includes(item.id)}
+              />
+            </Reveal>
           ))}
       </div>
       <ShowAllButton onShowAllToggle={handleShowAllToggle} showAll={showAll} />
