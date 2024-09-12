@@ -2,8 +2,8 @@ import Image from "next/image";
 
 const Header = () => {
   return (
-    <div data-testid="header" className="flex flex-col sm:pt-5 ">
-      <h2 className="text-right font-flowers text-2xl tracking-wider opacity-60 text-gray-300 pb-6 p-3 mr-2 sm:text-4xl md:text-6xl md:m-6 animate-fade-in-down">
+    <div data-testid="header" className="flex flex-col">
+      <h2 className="text-right font-flowers text-2xl tracking-wider opacity-60 text-amber-800 pb-6 p-3 mr-2 md:text-4xl md:m-6 animate-fade-in-down">
         Welcome to my portfolio
       </h2>
       <div className="flex justify-between items-end">
