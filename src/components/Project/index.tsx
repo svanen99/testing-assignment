@@ -23,7 +23,7 @@ const Project = ({
     <div
       key={id}
       data-testid="project"
-      className="flex flex-col bg-amber-100 rounded-lg shadow-lg overflow-hidden border border-gray-200 m-2 pt-4 max-w-[370px] max-[420px]:w-[320px]"
+      className="flex flex-col bg-amber-100 rounded-lg shadow-lg overflow-hidden border border-gray-200 m-2 pt-4 min-h-[560px] max-w-[370px] max-[420px]:w-[320px]"
     >
       <div className="flex justify-center">
         <div className="relative w-[340px] h-56 max-[420px]:w-[300px]">
@@ -40,7 +40,7 @@ const Project = ({
       <div className="flex flex-col flex-grow p-4">
         <div className="flex justify-between font-semibold">
           <h3 className="text-lg text-black">{title}</h3>
-          <p className="text-gray-700 text-xs mt-2">{date}</p>
+          <p className="text-gray-700 text-xs mt-2">{date}</p>  
         </div>
         <p data-testid="description" className="text-gray-700 mb-4 flex-grow">
           {description}
