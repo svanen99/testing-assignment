@@ -23,7 +23,7 @@ export default function RootLayout({
         <div className="flex-grow max-w-4xl mx-auto">
           {children}
         </div>
-      <Footer />
+      {/* <Footer /> */}
       </body>
     </html>
   );
