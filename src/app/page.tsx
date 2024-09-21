@@ -11,6 +11,7 @@ export default function Home() {
       <AboutMe {...about}/>
       {/* { <ProjectSection projects={projects} /> */}
       <Connect {...connect} /> 
+      <Footer />
     </>
   );
 }
