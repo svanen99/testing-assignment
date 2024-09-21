@@ -8,9 +8,9 @@ export default function Home() {
   return (
     <>
       <AboutMe {...about}/>
-      {/* <ProjectSection projects={projects} />
-      <Connect {...connect} /> */}
-      <Connect />
+      {/* { <ProjectSection projects={projects} /> */}
+      <Connect {...connect} /> 
+
     </>
   );
 }
