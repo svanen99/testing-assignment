@@ -1,5 +1,5 @@
 import AboutMe from "@/components/About";
-// import Connect from "@/components/Connect";
+import Connect from "@/components/Connect";
 // import ProjectSection from "@/components/ProjectSection";
 import { about, connect, projects  } from "@/utils/data";
 
@@ -10,6 +10,7 @@ export default function Home() {
       <AboutMe {...about}/>
       {/* <ProjectSection projects={projects} />
       <Connect {...connect} /> */}
+      <Connect />
     </>
   );
 }
