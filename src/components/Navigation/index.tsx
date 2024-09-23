@@ -35,7 +35,7 @@ const Navigation: React.FC<NavigationProps> = ({ onScrollToSection, activeSectio
   );
 
   return (
-    <nav className="sticky top-0 w-screen max-w-full text-white z-50">
+    <nav className="sticky top-0 w-screen max-w-full text-white z-50 bg-black">
       <div className="flex p-2 md:hidden">
         <button data-testid="open-menu-btn" onClick={toggleMenu} className="text-2xl absolute top-5 right-5">
           <Bars3Icon className="h-6 w-6 text-white" />
