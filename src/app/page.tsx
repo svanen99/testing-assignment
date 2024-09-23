@@ -1,14 +1,14 @@
 import AboutMe from "@/components/About";
 import Connect from "@/components/Connect";
-import ProjectSection from "@/components/ProjectSection";
 import { about, connect, projects  } from "@/utils/data";
+import Navigation from "@/components/Navigation";
 
 export default function Home() {
   
   return (
     <>
+      <Navigation />
       <AboutMe {...about}/>
-      <ProjectSection projects={projects} />
       <Connect {...connect} />
     </>
   );
