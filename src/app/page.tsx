@@ -1,6 +1,5 @@
 import AboutMe from "@/components/About";
 import Connect from "@/components/Connect";
-import Footer from "@/components/Footer";
 import { about, connect, projects  } from "@/utils/data";
 import Navigation from "@/components/Navigation";
 
@@ -11,7 +10,6 @@ export default function Home() {
       <Navigation />
       <AboutMe {...about}/>
       <Connect {...connect} /> 
-      <Footer />
     </>
   );
 }
