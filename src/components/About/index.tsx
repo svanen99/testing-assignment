@@ -2,7 +2,7 @@ import { AboutMeType } from "@/utils/types";
 
 const AboutMe = ({ start, experience, nextStep, purpose}: AboutMeType) => {
     return (
-        <section data-testid="about-me-section" className="text-pink-700 flex justify-center p-3 md:p-12">
+        <section data-testid="about-me-section" className="text-pink-200 flex justify-center p-3 md:p-12">
             <div className="leading-6 text-sm md:text-lg p-6 m-3">
                     <h2 className="text-center sticky text-lg z-10 md:text-2xl mb-10">
                         About Me
