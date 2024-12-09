@@ -1,4 +1,3 @@
-'use client'
 import React, { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
@@ -23,16 +22,22 @@ const Navigation: React.FC<NavigationProps> = ({ onScrollToSection, activeSectio
 
   const renderMenuItem = (id: string, label: string, testId: string, closeMenu = false) => (
     <li
-    key={id}
+      key={id}
       onClick={() => {
         onScrollToSection(id as "aboutMe" | "projects" | "connect");
         if (closeMenu) toggleMenu();
       }}
-      className={`cursor-pointer text-lg ${activeSection === id ? "underline decoration-pink-500" : "hover:border-b-2 border-pink-500"}`}
-      data-testid={testId}>
+      className={`cursor-pointer text-lg ${
+        activeSection === id
+          ? "underline decoration-pink-500"
+          : "hover:border-b-2 border-pink-500"
+      }`}
+      data-testid={testId}
+    >
       {label}
     </li>
   );
+
   return (
     <nav className="sticky top-0 w-full text-black z-50 rounded bg-pink-100">
       <div className="flex p-2 md:hidden">
@@ -46,7 +51,8 @@ const Navigation: React.FC<NavigationProps> = ({ onScrollToSection, activeSectio
           <button
             data-testid="close-menu-btn"
             onClick={toggleMenu}
-            className="absolute top-5 right-5 text-3xl">
+            className="absolute top-5 right-5 text-3xl"
+          >
             <XMarkIcon className="h-6 w-6" />
           </button>
           <ul data-testid="mobile-nav-list" className="space-y-5 w-full text-center bg-pink-600 text-pink-300">
@@ -56,6 +62,7 @@ const Navigation: React.FC<NavigationProps> = ({ onScrollToSection, activeSectio
           </ul>
         </div>
       )}
+
       <ul data-testid="desktop-nav" className="hidden md:flex pr-10 justify-end gap-10 py-4 px-2 w-full">
         {sections.map((section) => renderMenuItem(section.id, section.label, `desktop-${section.id}`))}
       </ul>
