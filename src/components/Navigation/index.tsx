@@ -10,9 +10,15 @@ const Navigation: React.FC<NavigationProps> = ({ onScrollToSection, activeSectio
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    document.body.classList.toggle("overflow-hidden", menuOpen);
-    setMenuOpen(!menuOpen);
-  };
+    setMenuOpen((prevState) => {
+      if (!prevState) {
+        document.body.classList.add("overflow-hidden");
+      } else {
+        document.body.classList.remove("overflow-hidden");
+      }
+      return !prevState;
+    });
+  };  
 
   const sections = [
     { id: "aboutMe", label: "About Me" },
@@ -47,7 +53,7 @@ const Navigation: React.FC<NavigationProps> = ({ onScrollToSection, activeSectio
       </div>
 
       {menuOpen && (
-        <div className="fixed inset-0 text-white flex flex-col justify-center items-center gap-10 text-xl overflow-x-hidden w-full bg-pink-600">
+        <div className="fixed inset-0 text-white flex flex-col justify-center items-center gap-10 text-xl overflow-x-hidden w-full bg-pink-300">
           <button
             data-testid="close-menu-btn"
             onClick={toggleMenu}
@@ -55,7 +61,7 @@ const Navigation: React.FC<NavigationProps> = ({ onScrollToSection, activeSectio
           >
             <XMarkIcon className="h-6 w-6" />
           </button>
-          <ul data-testid="mobile-nav-list" className="space-y-5 w-full text-center bg-pink-600 text-pink-300">
+          <ul data-testid="mobile-nav-list" className="space-y-5 w-full text-center bg-pink-300 text-pink-600">
             {sections.map((section) =>
               renderMenuItem(section.id, section.label, `mobile-${section.id}`, true)
             )}
