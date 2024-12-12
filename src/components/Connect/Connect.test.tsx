@@ -10,17 +10,13 @@ const mockData: ConnectType = {
 
 describe("Checks that Connect component renders correctly", () => {
   it("Checks component renders", () => {
-    render(<Connect onScrollToSection={function (section: "connect"): void {
-      throw new Error("Function not implemented.");
-    } } {...mockData} />);
+    render(<Connect {...mockData} />);
     const aboutMe = screen.getByTestId("connect-section");
     expect(aboutMe).toBeInTheDocument();
   });
 
   it("Checks for Connect section title", () => {
-    render(<Connect onScrollToSection={function (section: "connect"): void {
-      throw new Error("Function not implemented.");
-    } } {...mockData} />);
+    render(<Connect {...mockData} />);
     const connectSectionTitle = screen.getByRole("heading", {
       level: 2,
       name: "Let's Connect",
@@ -29,18 +25,14 @@ describe("Checks that Connect component renders correctly", () => {
   });
 
   it("Checks for connect text", () => {
-    render(<Connect onScrollToSection={function (section: "connect"): void {
-      throw new Error("Function not implemented.");
-    } } {...mockData} />);
+    render(<Connect {...mockData} />);
     const startText = screen.getByTestId("connect-text");
     expect(startText).toBeInTheDocument();
     expect(startText).toHaveTextContent(mockData.connectText);
   });
 
   it("Checks for mail address", () => {
-    render(<Connect onScrollToSection={function (section: "connect"): void {
-      throw new Error("Function not implemented.");
-    } } {...mockData} />);
+    render(<Connect {...mockData} />);
     const mailLink = screen.getByRole("link", {
       name: "blombergalexandras@gmail.com",
     });
@@ -52,9 +44,7 @@ describe("Checks that Connect component renders correctly", () => {
   });
 
   it("Checks for LinkedIn link", () => {
-    render(<Connect onScrollToSection={function (section: "connect"): void {
-      throw new Error("Function not implemented.");
-    } } {...mockData} />);
+    render(<Connect {...mockData} />);
     const socialLink = screen.getByRole("link", { name: "LinkedIn" });
     expect(socialLink).toBeInTheDocument();
     expect(socialLink).toHaveAttribute(
